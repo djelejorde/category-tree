@@ -6,7 +6,7 @@ This project implements a simple API endpoint with user interface for sidebar se
 ----
 ## Technologies
 ----
-- Slim Framwork v4 (API)
+- Slim Framwork v4 (API) with JWT Authentication
 - Angular 11.2.10
 - Angular Material 11
 - Docker / Docker Compose
@@ -26,7 +26,14 @@ This project implements a simple API endpoint with user interface for sidebar se
 
 ### Database Migration
 - Go to `http://localhost:8080/adminer`.
-- Key in the mysql credentials declared in `docker-compose.yml`, then import `data.sql`.
+- Input the mysql credentials declared in `docker-compose.yml`, then import `data.sql`.
+
+   ```
+   Host: 127.0.0.1
+   User: app
+   Password: pass
+   Database Name: app
+   ```
 
 ### Angular
 - Go to `frontend/search-facets/`, then run `npm install`.
