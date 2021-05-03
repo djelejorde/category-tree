@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  app:
+    image: adhocore/lemp:7.4
+    container_name: search-api
+    volumes:
+      - ./src:/var/www/html
+      - ./nginx/vhosts:/etc/nginx/sites-enabled
+      - db_data:/var/lib/mysql
+    ports:
+      - 8080:80
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_DATABASE: app
+      MYSQL_USER: app
+      MYSQL_PASSWORD: pass
+
+volumes:
+  db_data: {}
